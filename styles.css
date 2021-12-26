@@ -1,0 +1,131 @@
+/*********** Universal Selectors ***********/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Bright-Orange: hsl(31, 77%, 52%);
+    --Dark-Cyan: hsl(184, 100%, 22%);
+    --Very-Dark-Cyan:hsl(179, 100%, 13%);
+    --Big-Shoulders:'Barlow Semi Condensed', sans-serif;
+    --Lexica: 'Lexend Deca', sans-serif;
+}
+
+
+.sedans h2 , .suv h2 , .luxury h2 {
+    margin:1rem;
+    font-size:2rem;
+    font-family: var(--Big-Shoulders);
+    font-weight: 700;
+    color: hsl(0, 0%, 95%);
+}
+
+.sedans p , .suv p ,.luxury p{
+    margin: 0 1rem 3rem 1rem;
+    font-size: 1rem;
+    font-family: var(--Lexica);
+    font-weight:400;
+    color:hsla(0, 0%, 100%, 0.75);
+}
+
+
+.btn{
+    background-color: hsl(0, 0%, 95%);
+    border:none;
+    border-radius:20px;
+    padding:0.5rem;
+    margin: 0 1rem 1rem 1rem;
+    width:100px;
+    text-align: center;
+    font-family: var(--Lexica);
+    font-weight: 400;
+}
+
+
+
+.img{
+    margin-top:1.5rem;
+}
+/*********** Container Styling ***********/
+
+.container{
+    width:50%;
+    margin:100px auto;
+    display:grid;
+    grid-template-columns: repeat(3,1.5fr);
+}
+
+
+
+/*********** Sedans Section Styling ***********/
+
+
+.sedans{
+    background-color: var(--Bright-Orange);
+    padding:1rem;
+    border-radius: 10px 0  0 10px;
+}
+
+.btn1{
+    color:var(--Bright-Orange);
+}
+
+
+
+
+/***********Suv Section Styling ***********/
+
+
+.suv{
+    background-color: var(--Dark-Cyan);
+    padding:1rem;
+}
+
+
+.btn2{
+    color:var(--Dark-Cyan);
+}
+
+
+/*********** Luxury Section Styling ***********/
+
+.luxury{
+    background-color: var(--Very-Dark-Cyan);
+    padding:1rem;
+    border-radius: 0 10px 10px 0;
+}
+
+.btn3{
+    color:var(--Very-Dark-Cyan);
+}
+
+
+
+/************* Responsive Design *******/
+
+@media only screen and (max-width:768px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+        
+    }
+
+    .sedans{
+        border-radius: 10px 10px 0 0;
+        grid-row: 1/2;
+        
+    }
+
+    .suv{
+        grid-row: 2/3;
+    }
+
+    .luxury{
+        border-radius: 0 0 10px 10px;
+        grid-row: 3/4;
+
+    }
+}
